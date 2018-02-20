@@ -1,0 +1,19 @@
+{
+	"name": "inquid/yii2-google-debugger",
+	"description": "Use Google Cloud Logger into your Yii projects",
+	"type": "yii2-extension",
+	"keywords": ["yii2", "extension", "google", "google cloud", "logger", "debugger", "target"],
+	"license": "Apache-2.0",
+	"authors": [{
+		"name": "inquid",
+		"email": "luisarmando1234@gmail.com"
+	}],
+	"require": {
+		"yiisoft/yii2": "~2.0.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"inquid\\google_debugger\\": "src"
+		}
+	}
+}
