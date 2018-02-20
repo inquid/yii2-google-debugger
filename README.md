@@ -32,7 +32,7 @@ Once the extension is installed, simply generate a service account with Cloud De
 	...
 	'googleCloud' => [
 		'class' => 'inquid\google_debugger\GoogleCloudLogger',
-		'categories' => [... your categories ...],
+		'categories' => ['... your categories ...'],
 		'levels' => ['info', 'trace', 'warning','error'],
 		'except' => ['yii\web\HttpException:*', 'yii\i18n\I18N\*'],
 		'prefix' => function () {
