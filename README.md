@@ -31,7 +31,7 @@ Once the extension is installed, simply generate a service account with Cloud De
 'targets' => [
 	...
 	'googleCloud' => [
-		'class' => 'app\components\GoogleCloudLogger',
+		'class' => 'inquid\google_debugger\GoogleCloudLogger',
 		'categories' => [... your categories ...],
 		'levels' => ['info', 'trace', 'warning','error'],
 		'except' => ['yii\web\HttpException:*', 'yii\i18n\I18N\*'],
