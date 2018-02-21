@@ -28,23 +28,24 @@ Usage
 Once the extension is installed, simply generate a service account with Cloud Debugger Agent permissions and configure your target as the following:
 
 ```php
-'targets' => [
-	...
-	'googleCloud' => [
-		'class' => 'inquid\google_debugger\GoogleCloudLogger',
-		'categories' => ['... your categories ...'],
-		'levels' => ['info', 'trace', 'warning','error'],
-		'except' => ['yii\web\HttpException:*', 'yii\i18n\I18N\*'],
-		'prefix' => function () {
-			$url = !Yii::$app->request->isConsoleRequest ? Yii::$app->request->getUrl() : null;
-			return sprintf('[%s][%s]', Yii::$app->id, $url);
-		},
-		'projectId' => '... your project id ...',
-		'loggerInstance' => '... name of your app ...',
-		'clientSecretPath' => '../google_credentials.json' //path to your credentials
-	]
-	...
-],
+        'log' => [
+            'traceLevel' => YII_DEBUG ? 3 : 0,
+            'targets' => [
+                'googleCloud' => [
+                    'class' => 'inquid\google_debugger\GoogleCloudLogger',
+                    'categories' => ['cat1','cat2'], //Your categories to log
+                    'levels' => ['info', 'trace', 'warning', 'error'],
+                    'except' => ['yii\web\HttpException:*', 'yii\i18n\I18N\*'],
+                    'prefix' => function () {
+                        $url = !Yii::$app->request->isConsoleRequest ? Yii::$app->request->getUrl() : null;
+                        return sprintf('[%s][%s]', Yii::$app->id, $url);
+                    },
+                    'projectId' => 'project-id',
+                    'loggerInstance' => 'instance-log',
+                    'clientSecretPath' => '../google_credentials.json' //path to your service account credentials
+                ]
+            ],
+        ],
 ```
 
 And thats it! log as you may log using Yii
