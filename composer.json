@@ -10,7 +10,7 @@
 	}],
 	"require": {
 		"yiisoft/yii2": "~2.0.0",
-		"google/cloud": "^0.35.0"
+		"google/cloud": "*"
 	},
 	"autoload": {
 		"psr-4": {
