@@ -39,7 +39,8 @@ class GoogleCloudLogger extends Target
     const INVENTARIOS_LOG = "inventarios-log";
     const REPORTES_LOG = "reportes-log";
     const CATALOGOS_LOG = "catalogos-log";
-    const ORDENES_LOG = "ordenes-log";
+    const GASTOS_LOG = "gastos-log";
+    const PLANEACION_LOG = "planeacion-log";
 
     /**
      * Initializes the GoogleCloudLogger component.
