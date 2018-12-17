@@ -41,7 +41,8 @@ class GoogleCloudLogger extends Target
     const CATALOGOS_LOG = "catalogos-log";
     const GASTOS_LOG = "gastos-log";
     const PLANEACION_LOG = "planeacion-log";
-
+    const ORDENES_LOG = "ordenes-log";
+    
     /**
      * Initializes the GoogleCloudLogger component.
      * This method will initialize the Google Cloud property to make sure it refers to a valid Google project.
