@@ -10,7 +10,8 @@
 	}],
 	"require": {
 		"yiisoft/yii2": "~2.0.0",
-		"google/cloud": "*"
+		"google/cloud-logging": "^1.11",
+		"google/cloud-error-reporting": "^0.10.1"
 	},
 	"autoload": {
 		"psr-4": {
