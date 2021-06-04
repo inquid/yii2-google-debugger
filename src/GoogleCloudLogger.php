@@ -18,30 +18,21 @@ class GoogleCloudLogger extends Target
      * @var string $projectId
      */
     public $projectId;
+
     /**
      * @var string $loggerInstance
      */
     public $loggerInstance;
+
     /**
      * @var string $clientSecretPath
      */
     public $clientSecretPath;
+
     /**
      * @var Logger $logger
      */
-    private $logger;
-    private $logging;
-
-    /*
-     * Constants to use along the project
-     */
-    const FACTURAS_LOG = "factura-log";
-    const INVENTARIOS_LOG = "inventarios-log";
-    const REPORTES_LOG = "reportes-log";
-    const CATALOGOS_LOG = "catalogos-log";
-    const GASTOS_LOG = "gastos-log";
-    const PLANEACION_LOG = "planeacion-log";
-    const ORDENES_LOG = "ordenes-log";
+    protected $logger;
     
     /**
      * Initializes the GoogleCloudLogger component.
@@ -50,12 +41,13 @@ class GoogleCloudLogger extends Target
     public function init()
     {
         parent::init();
-        $this->logging = new LoggingClient([
+        $loggingClient = new LoggingClient([
             'projectId' => $this->projectId,
             'keyFilePath' => $this->clientSecretPath,
         ]);
+
         // Get a logger instance.
-        $this->logger = $this->logging->logger($this->loggerInstance);
+        $this->logger = $loggingClient->logger($this->loggerInstance);
     }
 
     /**
