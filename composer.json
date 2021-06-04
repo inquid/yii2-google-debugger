@@ -3,15 +3,14 @@
 	"description": "Use Google Cloud Logger into your Yii projects",
 	"type": "yii2-extension",
 	"keywords": ["yii2", "extension", "google", "google cloud", "logger", "debugger", "target"],
-	"license": "Apache-2.0",
+	"license": "MIT",
 	"authors": [{
 		"name": "inquid",
-		"email": "luisarmando1234@gmail.com"
+		"email": "contact@inquid.co"
 	}],
 	"require": {
-		"yiisoft/yii2": "~2.0.0",
-		"google/cloud-logging": "^1.11",
-		"google/cloud-error-reporting": "^0.10.1"
+		"yiisoft/yii2": "*",
+		"google/cloud-logging": "^1.21"
 	},
 	"autoload": {
 		"psr-4": {
